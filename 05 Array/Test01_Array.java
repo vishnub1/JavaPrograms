@@ -21,7 +21,6 @@ class Test01_Array {
 		ia1[3] = 6;
 		ia1[4] = 7;
 
-
 		//reading and displaying values available in array
 		for (int i = 0 ;i<ia1.length ;i++ ){
 			System.out.println(ia1[i]);
