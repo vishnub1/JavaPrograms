@@ -12,7 +12,7 @@ static void add(int...a){
 				sum += a[i];
 			}
 				System.out.println("Result :"+sum);
-		}
+	}
 }
 public static void main(String[] args){
 
