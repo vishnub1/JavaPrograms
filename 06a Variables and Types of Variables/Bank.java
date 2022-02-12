@@ -1,38 +1,52 @@
-class Bank {
+import java.util.Scanner;
+
+public class Bank {
 	public static void main(String[] args){
 		
-		BankAccount acc1 = new BankAccount();
-		BankAccount acc2 = new BankAccount();
+		Scanner scn = new Scanner(System.in);
 
-		BankAccount.setBankDetails("HDFC","UDGIR","HDF1235");
+		System.out.print("Enter Bank Name :");
+		BankAccount.bankName = scn.nextLine();
 
-		System.out.println("\n acc1 object Details");
-		acc1.setBankAccountDetails(123,"Vishnu",29000);
-		acc1.display();
+		System.out.print("Enter Branch Name :");
+		BankAccount.branchName = scn.nextLine();
 
-		System.out.println("\n acc2 object Details");
-		acc2.setBankAccountDetails(222,"Harsh",80000);
-		acc2.display();
-			
-		acc1.setBankDetails("ICICI","LATUR","ICR1223");
+		System.out.print("Enter IFSC :");
+		BankAccount.ifsc = scn.nextLine();
 
-		System.out.println("Account Object Details");
-		acc2.display();
+		// creating instance for diff customer objects
+		System.out.println("How many account do you want to open ?");
+		int noOfAccounts = scn.nextInt();
 
-		acc1.deposit(7000);
-		System.out.println("\n acc1 object details");
-		acc1.display();
-
-		acc2.withdraw(5000);
-		System.out.println("\n acc2 Details :");
-		acc2.display();
-
-		System.out.println("\n acc1 object details:");
-		acc1.display();
-
-		System.out.println("\n acc2 object details :");
-		acc2.display();
-		
-
+		BankAccount[] acc = new BankAccount[noOfAccounts];
+		for(int index = 0;index<noOfAccounts;index++){
+			System.out.println("\nEnter Customer"+ (index+1) +" details");
+            acc[index] = new BankAccount(); 
+            System.out.print("Enter accNum\t: ");
+            acc[index].accNum = scn.nextLong();  scn.nextLine();
+            System.out.print("Enter accHName\t: ");
+            acc[index].accHName =  scn.nextLine();
+            System.out.print("Enter balance\t: ");
+            acc[index].balance = scn.nextDouble();
+            System.out.println("\nEnter Customer"+ (index +1) +" address details");
+            acc[index].address = new Address(); 
+            System.out.print("Enter dnum\t: ");
+            acc[index].address.dnum = scn.next();
+            System.out.print("Enter strnum\t: ");
+            acc[index].address.strnum = scn.nextInt(); scn.nextLine();
+            System.out.print("Enter city\t: ");
+            acc[index].address.city = scn.nextLine();
+			}
+			System.out.println("\n All Account Details");
+			for(int index=0; index < noOfAccounts;index++){
+				System.out.println("acc"+(index+1)+" details");
+				acc[index].display();
+				System.out.println();
+			}
+			System.out.println("\nPerfoming business operations on first account");
+             acc[0].deposit(5000);
+             double amt = acc[0].withdraw(2000);
+             acc[0].currentBalance();
+             acc[0].transferMoney(acc2, 5000);
 	}
 }

@@ -1,30 +1,17 @@
 class Example6 {
-	static int a = 10;
-	static final int b = 20;
+	static void m1(){
+		System.out.println("m1");
+	}
+	static void m2(int a){
+		System.out.println("M2 with a");
+	}
 
-	int x = 30;
-	final int y = 40;
-
-	public static void main(String[] agrs){
-
-		System.out.println("a :"+a);
-		System.out.println("b :"+b);
-
-//		System.out.println("x :"+x);  non static variable
-//		System.out.println("y :"+y);  final local variable
-
-		Example6 e1 = new Example6();
-		System.out.println("x :"+e1.x);
-		System.out.println("y :"+e1.y);
-
-		int p = 50;
-		final int q = 60;
-
-		final int r;
-		r = 191;
-	//	r = 220;  error: variable r might already have been assigned
-
-		// q = 70;  final keyword error
-
+	public static void main(String[] args){
+		m1();
+//		m1(50);
+		m2(89);
+		m2('a');
+//		m2(50.32);
+		m2('a');
 	}
 }

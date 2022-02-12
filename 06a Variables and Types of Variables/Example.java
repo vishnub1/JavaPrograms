@@ -1,16 +1,24 @@
 class Example {
+	static int a = 10;
+	static int b = a + 20;
+
+//	a = 20;
+//   System.out.println(a+" "+b);
+
+// 	m1();
+//	if(true){
+//		Sytem.out.println("Hii");
+//	}
+
+public static void main(String[] args){
+	System.out.println(a+" "+b);
+
+	m1();
+	if(true){
+		System.out.println("Hiii");
+	}
 	static void m1(){
-		int p = 10;
-		System.out.println(p);
-		m2();
+		System.out.println("m1");
 	}
-	static void m2(){
-	//	int q = p + 10;
-	//	System.out.println(q);
-
-	}
-	public static void main(String[] args){
-		m1();
-	}
-
 }
+
