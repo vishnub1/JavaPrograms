@@ -1,21 +1,24 @@
-// Passing object as an argument and return type
+class Example {
+	static int a = 10;
+	static int b = a + 20;
 
-class A {}
-public class Example7 {
-	static void m1(A a){
-		System.out.println("M1");
+//	a = 20;
+//   System.out.println(a+" "+b);
+
+// 	m1();
+//	if(true){
+//		Sytem.out.println("Hii");
+//	}
+
+public static void main(String[] args){
+	System.out.println(a+" "+b);
+
+	m1();
+	if(true){
+		System.out.println("Hiii");
 	}
-	static A m2(String s){
-		System.out.println("m2");
-		return new A();
-	}
-	public static void main(String[] args){
-		A a1 = new A();
-		m1(a1);
-
-		m2("hari");
-		A a2 = m2("Krishna");
-
-		System.out.println("Naresh iT");
+	static void m1(){
+		System.out.println("m1");
 	}
 }
+
