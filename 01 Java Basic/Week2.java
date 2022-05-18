@@ -18,7 +18,6 @@ Whenever we divide a number by zero i.e by floating point literal then in both t
 
 
 javap java.lang.Double  // POSITIVE_INFINITY,  NEGATIVE_INFINITY AND NaN
-
 javap java.lang.Integer // No such kind of final static variable is here
 ------------------------------------------------------------------------------------------------
 //Arithmetic Operator
