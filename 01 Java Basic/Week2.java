@@ -38,7 +38,6 @@ class Test16
 Unary Operator :
 -------------------
 These operator works with single operand.
-
 There are 3 types of Unary Operator
 
 1) Unary minus Operator (-)
